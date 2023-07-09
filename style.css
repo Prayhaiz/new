@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&display=swap');
+
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+* , *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+}
+ /* body */
+body {
+    display: grid;
+    background-color: hsl(0, 0%, 100%);
+}
+
+/* Overall Container*/
+.container {
+    width: 26.5625rem;
+    height: 41.6875rem;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(30, 38%, 92%);
+}
+    /* Inside Container*/
+.picture-layout {
+    margin-top: 1.6875rem;
+    margin-left: 2.5313rem;
+    width: 21.5rem;
+    height: 38.4375rem;
+    border-top-right-radius: .3125rem;
+    border-top-left-radius: .3125rem;
+    background-color: hsl(0, 0%, 100%);
+}
+    /* Image */
+.picture {
+    width: 21.5rem;
+    height: 15.0625rem;
+    margin-bottom: 1.25rem;
+    border-top-right-radius: .3125rem;
+    border-top-left-radius: .3125rem;
+}
+    /* Perfume text*/
+.muted-text {
+    font-family: 'Montserrat', serif;
+    font-size: .9375rem;
+    font-weight: 500;
+    letter-spacing: 5px;
+    margin-top: 0;
+    margin-left: 1.5625rem;
+    margin-bottom: 1.125rem;
+    margin-right: 14.125rem;
+    opacity: 0.4;
+} 
+    /* H3 text */
+.text-one {
+    font-family: 'Fraunces', serif;
+    font-size: 2.1875rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-left: 1.5625rem;
+    margin-bottom: 1.5625rem;
+    line-height: 1;
+}
+    /* Paragraph text */
+p {
+    font-family: 'Montserrat', serif;
+    font-size: .9375rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: .9375rem;
+    margin-left: 1.5625rem;
+    opacity: .4;
+}
+
+span{  
+    margin-bottom: .4375rem;
+}
+
+a {
+    text-decoration: none;
+    color: hsl(158, 36%, 37%);
+}
+    /*Price tag*/
+.price {
+    font-family: 'Fraunces', serif;
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-left: 1.6875rem;
+    margin-right: 1.25rem;
+    margin-bottom: .9375rem;
+}
+
+.sm-price {
+    padding-top: -7px;
+    color: #000000;
+    opacity: .6;
+}
+    /*NOTE - Button*/
+    button {
+    font-family: 'Montserrat', serif;
+    font-weight: 700;
+    width: 18.5625rem;
+    height: 2.9375rem;
+    margin-top: .9375rem;
+    margin-left: 1.5625rem;
+    margin-bottom: .9375rem;
+    margin-right: 1.5625rem;
+    background-color: hsl(158, 36%, 37%);
+    color: #ffff;
+    border: none;
+    border-radius: .3125rem;
+    cursor: pointer;
+    }
+
+
+button:hover {
+    background-color: hsl(158, 36%, 37%);
+    opacity: .8;
+}
+
+    /*NOTE - Media Query for devuces between 398px and 425px  (MOBILE)*/
+    @media screen and (max-width:425px) {
+        .container {
+            width: 425px;
+        }
+    }
+
+        /*NOTE - Media Query for devices between 426px and 768px ( TABLET) */
+        @media screen and (min-width: 426px)  and (max-width: 768px) {
+            .container {
+                width: 768px;
+                height: 690px;
+            }
+
+            .picture-layout {
+                width: 380px;
+                height: 630px;
+                margin-left: 192px;
+            }
+
+            .picture {
+                width: 380px;
+                height: 255px;
+            }
+
+            .muted-text {
+                margin-left: 35px;
+            }
+
+            .text-one {
+                margin-left: 36px;
+                margin-bottom: 15px;
+                margin-right: 15px;
+            }
+            p {
+                font-size: 18px;
+                line-height: 1.4;
+                margin-left: 35px;
+                margin-right: 35px;
+            }
+
+            p span {
+                margin-left: 5px;
+            }
+
+            .price {
+                margin-left: 35px;
+            }
+
+            button {
+                width: 315px;
+                margin-left: 33px;
+            }
+
+        }
+
+     /*NOTE - Media Query for devices between 769 and 1024*/
+     @media screen and (min-width: 769px) and (max-width: 1024px) {
+        .container {
+            position: relative;
+            width: 1000px;
+        }
+
+        .picture-layout{
+            position: absolute;
+            top: 140px;
+            left: 240px;
+            width: 520px;
+            height: 380px;
+            margin: 0;
+            border-radius: 5px;
+        }
+
+        .picture {
+            width: 260px;
+            height: 380px;
+            background-image: url(/images/image-product-desktop.jpg);
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-top-right-radius: 0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .muted-text {
+            position: inherit;
+            top: 28px;
+            right: 130px;
+            margin: 0;
+        }
+
+        .text-one {
+            position: inherit;
+            top: 55px;
+            right: 70px;
+            margin-left: 290px;
+            margin-bottom: 22px;
+            font-size: 24px;
+            line-height: 1.2;
+        }
+
+        p {
+            position: inherit;
+            top: 150px;
+            margin-left: 290px;
+            margin-right: 25px;
+        }
+
+        p span {
+            margin: 0;
+        }
+
+        .price {
+            position: inherit;
+            top: 260px;
+        }
+
+        .sm-price {
+            position: inherit;
+            top: 267px;
+            margin-left: 160px;
+        }
+
+        button {
+            position: inherit;
+            top: 300px;
+            width: 220px;
+            margin-left: 280px;
+        }
+
+        button:hover, button:visited {
+            background-color: hsl(158, 36%, 37%);
+            opacity: .8;  
+        }
+    }
+
+
+    /*NOTE -  Media Query for devices between 1204px and 1440px */
+    @media screen and (min-width: 1025px) and (max-width: 1440px) {
+        .container {
+            width: 1440px;
+            height: 1048px;
+        }
+
+        .picture-layout {
+            position: absolute;
+            top: 296.5px;
+            left: 420px;
+            right: 420px;
+            bottom: 296.5px;
+            width: 600px;
+            height: 455px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .picture {
+            width: 300px;
+            height: 455px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-top-right-radius: 0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .muted-text {
+            position: inherit;
+            top: 31px;
+            right: 159px;
+            margin: 0;
+        }
+
+        .text-one {
+            position: inherit;
+            top: 64px;
+            right: 70px;
+            margin-left: 335px;
+            margin-bottom: 28px;
+            font-size: 28px;
+            line-height: 1.2;
+        }
+
+        p {
+            position: inherit;
+            top: 175px;
+            margin-left: 330px;
+            margin-right: 25px;
+        }
+
+        p span {
+            margin: 0;
+        }
+
+        .price {
+            position: inherit;
+            top: 320px;
+        }
+
+        .sm-price {
+            position: inherit;
+            top: 332px;
+            margin-left: 160px;
+        }
+
+        button {
+            position: inherit;
+            top: 366px;
+            width: 230px;
+            margin-left: 330px;
+        }
+
+        button:hover, button:visited {
+            background-color: hsl(158, 36%, 37%);
+            opacity: .8;  
+        }
+    }
